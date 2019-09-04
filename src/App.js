@@ -1,26 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import DynamicForm from "./components/DynamicForm"
+import HotelDetails from './components/HotelDetails';
 import './App.css';
 
-function App() {
+export default function App() {
+
+  const ROOMS_COUNT = 4
+  const ADULT_OPTIONS = [1, 2]
+  const CHILDREN_OPTIONS = [0, 1, 2]
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <Router>
+
+      <header className="app-header">
+        <Link to="/" className="btn btn-dark">Back</Link>
+        <Link to="/" className="logo">
+          <img src="../hi_mk_logo_hiltonbrandlogo_3.jpg" width="70" alt="hilton Logo" />
+        </Link>
+        <h4>Hotel Details</h4>
       </header>
-    </div>
+
+      <Route path="/" exact component={HotelDetails} />
+      <Route path="/dynamicform" render={() => <DynamicForm roomsCount={ROOMS_COUNT} childrenOptions={CHILDREN_OPTIONS} adultOptions={ADULT_OPTIONS} />} />
+
+      <footer>
+          <p><a href="/">Privacy</a>
+            <a href="/">Sitemap</a>
+            <Link to="/dynamicform">DynamicForm</Link>
+            Hilton Assessment | 2019 Amir Tawfik</p>
+      </footer>
+    </Router>
   );
 }
-
-export default App;

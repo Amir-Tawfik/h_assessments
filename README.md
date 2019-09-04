@@ -11,7 +11,7 @@
 
 `npm test`
 
-## Featuresd
+## Featured
 
 -   React 16.x
 -   Jest 24.x
@@ -29,4 +29,3 @@
 - Viewer can navigate to 2nd assessment by clicking any link/button in the 1st assessment page or type url localhost:3000/dynamicForm
 - Viewer can navigate to back to 1st assessment by clicking on back button on top-right corner in the 2nd assessment page or type url localhost:3000/
 - Also provided a standalone html for 1st Assessment on root folder
-# h_assessments

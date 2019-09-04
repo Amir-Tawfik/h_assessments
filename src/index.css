@@ -1,13 +1,139 @@
-body {
+html {
+  position: relative;
+  min-height: 100%;
+}
+body{
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #fff;
+  margin: 0 0 100px;
+  background: #000 url('background.png');
+  height: 100%;
+  background-size: cover;
+}
+main{
+  margin: 50px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+form{
+  margin-top: 30px;
 }
+
+
+ /* Header Style */
+header.app-header{
+  background-color: rgba(000, 000, 000, 0.7);
+  margin-bottom: 5%;
+  border-bottom: 1px solid #323232;
+}
+header a.btn{
+  float: left;
+  margin: 15px;
+}
+header .logo{
+  float: right;
+  margin: 5px 25px;
+}
+header h4{
+  margin: auto;
+text-align: center;
+padding: 20px 0;
+}
+
+/* Navigator Style */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 60px;
+}
+
+nav ul li a {
+  display: block;
+  color: #000;
+  padding: 12px 16px;
+  text-decoration: none;
+  background-image: linear-gradient(white, #cbd8df);
+  font-weight: bold;
+}
+nav ul li a i{
+  float: right;
+}
+nav ul li a:hover {
+  background-image: linear-gradient(#e1f3ff, #c0def2);
+  text-decoration: none;
+  color: #000;
+}
+
+/* Footer Style */
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+  overflow: hidden;
+  font-size: 14px;
+  color: #ccc;
+  text-align: center
+}
+footer a{
+  margin-right: 20px;
+}
+
+
+input[type="checkbox"], h6 label{
+  margin-right: 8px;
+  cursor: pointer;
+}
+input[type=checkbox]
+{
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+  transform: scale(1.5);
+  padding: 10px;
+}
+
+
+/* Responsive Style */
+@media screen and (max-width:900px) {
+  .main-figure img{
+    width: 100%;
+    margin-right: 5px; 
+   }
+
+   main.container{
+    padding-right: 20px;
+    padding-left: 20px;
+   }
+}
+
+@media screen and (max-width:768px) {
+  main h3, header h4{
+    font-size: large;
+  }
+  header .logo img{
+    width: 55px;
+  }
+}
+
+@media screen and (min-width:900px) {
+  nav ul {
+    display: inline-flex;
+    text-align: center;
+    width: 100%;
+  }
+  nav ul li {
+    width: 25%;
+    border-right: 1px solid #bbb; 
+  }
+  nav ul li a i.fa{
+    display: none;
+  }
+}
+
