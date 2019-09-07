@@ -14,7 +14,7 @@ export default function App() {
     <Router>
 
       <header className="app-header">
-        <Link to="/" className="btn btn-dark">Back</Link>
+        <Link to="/" className="btn btn-dark"><i class="fa fa-chevron-left"></i>Back</Link>
         <Link to="/" className="logo">
           <img src="../hi_mk_logo_hiltonbrandlogo_3.jpg" width="70" alt="hilton Logo" />
         </Link>

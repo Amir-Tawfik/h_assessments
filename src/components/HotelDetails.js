@@ -8,7 +8,7 @@ export default function HotelDetails(props) {
         <main className="container">
                 <article className="hotel-details">
                     <figure className="main-figure">
-                        <img src="../hotelexterior.jpg" className="rounded" width="650" alt="Hotel Exterior" />
+                        <img src="../hotelexterior.jpg" className="rounded" width="750" alt="Hotel Exterior" />
                     </figure>
                     <h3><strong>Hilton Chicago</strong></h3>
                     <p>720 South Michigan Avenue<br />
